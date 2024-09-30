@@ -1,0 +1,32 @@
+:root {
+	--primary-col:#000;
+	--secondary-col:#222;
+	--extra-col:#256;
+	--text-col:#ddd;
+}
+
+:root #light:target  { /* light mode is fine too :okyesbeebostandable: */
+	--primary-col:#fff;
+	--secondary-col:#eee;
+	--extra-col:#111;
+	--text-col:#000;
+}
+
+#titlebar, #content {
+	padding: 0px 10px;
+}
+
+body {
+	background-color:var(--secondary-col);
+	font-family:arial;
+	color:var(--text-col);
+}
+#page {
+	padding:8px;
+	border: 2px solid var(--extra-col);
+	background-color:var(--primary-col);
+	box-shadow: 0px 10px 20px #0005;
+	border-radius:6px;
+	width:90vw;
+	max-width:1500px;
+}
