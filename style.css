@@ -21,6 +21,32 @@ body {
 	font-family:arial;
 	color:var(--text-col);
 }
+ol {
+  list-style-type: none;
+  counter-reset: item;
+  margin: 0;
+  padding: 0;
+}
+
+ol > li {
+  display: table;
+  counter-increment: item;
+  margin-bottom: 0.6em;
+}
+
+ol > li:before {
+  content: counters(item, ".") ". ";
+  display: table-cell;
+  padding-right: 0.6em;    
+}
+
+li ol > li {
+  margin: 0;
+}
+
+li ol > li:before {
+  content: counters(item, ".") " ";
+}
 #page {
 	padding:8px;
 	border: 2px solid var(--extra-col);
@@ -29,4 +55,11 @@ body {
 	border-radius:6px;
 	width:90vw;
 	max-width:1500px;
+}
+
+#doctree {
+	border: 1px solid var(--text-col);
+	padding:16px;
+	margin:4px;
+	border-radius:4px;
 }
